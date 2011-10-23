@@ -29,5 +29,9 @@ class ApplicationController < ActionController::Base
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end
     end
+    
+    def current_user_location
+      @current_user_location ||= IPLocator.lookup((Rails.env.development? || Rails.env.test?) ? "204.16.202.2" : request.remote_ip)
+    end
 
 end

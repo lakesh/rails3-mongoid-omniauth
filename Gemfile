@@ -16,3 +16,7 @@ gem "launchy", ">= 2.0.5", :group => :test
 gem "bson_ext", ">= 1.4.0"
 gem "mongoid", ">= 2.3.0"
 gem "omniauth", ">= 0.3.0"
+
+#Geolocation
+gem 'geoip'
+
