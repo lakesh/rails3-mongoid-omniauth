@@ -6,7 +6,9 @@
   <%= link_to('Logout', signout_path) %>        
   </li>
 <% else %>
-  <li>
-  <%= link_to('Login', signin_path)  %>  
-  </li>
+  <h2>Login with</h2>
+  <div class="authentication">
+    <%= link_to image_tag("icons/twitter_32.png", :size => "32x32"), '/auth/twitter'  %>  
+    <%= link_to image_tag("icons/facebook_32.png", :size => "32x32"), '/auth/facebook'  %>  
+  </div>
 <% end %>
